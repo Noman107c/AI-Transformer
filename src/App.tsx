@@ -401,26 +401,40 @@ export default function App() {
       {/* Primary Dashboard viewport layout */}
       <div className="flex-1 flex flex-col min-w-0 max-h-screen overflow-y-auto">
         {/* Dynamic Nav-header bar */}
-        <header className="bg-slate-900/40 backdrop-blur-md border-b border-slate-800 sticky top-0 z-30 px-6 py-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 select-none">
-          <div className="space-y-0.5">
-            <h1 className="text-sm font-bold tracking-tight text-slate-100 uppercase">
-              Asynchronous Machine Learning Driven Asset Lifecycle Management
+        <header className="bg-slate-900 border-b border-slate-800 sticky top-0 z-30 px-6 py-4 flex flex-col xl:flex-row justify-between items-start xl:items-center gap-4 select-none">
+          <div className="space-y-1">
+            <h1 className="text-sm md:text-base font-extrabold tracking-tight text-white uppercase">
+              INTEGRATED MACHINE LEARNING DRIVEN ASSET LIFECYCLE MANAGEMENT
             </h1>
-            <p className="text-xs text-slate-450 uppercase font-mono tracking-wider font-semibold">
-              Power Grid Distribution Substation Transformers forecasting
+            <p className="text-[10px] md:text-xs text-sky-450 font-bold uppercase tracking-widest font-mono">
+              FOR DISTRIBUTION TRANSFORMERS
             </p>
           </div>
           
-          <div className="flex flex-wrap items-center gap-4 text-xs font-mono">
-            {/* Range Select specs */}
-            <div className="bg-slate-950 px-3 py-1.5 border border-slate-850 text-slate-400 rounded-lg flex items-center gap-2">
-              <span className="text-[10px] uppercase text-slate-500">Interval:</span>
-              <span className="text-slate-300 font-bold">15-Min Intervals</span>
+          <div className="flex flex-wrap items-center gap-3.5 text-xs">
+            {/* Time Range */}
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] uppercase font-bold text-slate-500">Time Range</span>
+              <div className="bg-slate-950 px-3 py-1.5 border border-slate-850 text-slate-300 rounded font-semibold font-mono">
+                01-May-2019 00:00 <span className="text-slate-500 font-normal mx-0.5">to</span> 30-Apr-2024 23:45
+              </div>
             </div>
 
-            <div className="bg-slate-950 px-3 py-1.5 border border-slate-855 text-slate-400 rounded-lg flex items-center gap-2">
-              <span className="text-[10px] uppercase text-slate-500">Sync:</span>
-              <span className="text-emerald-400 font-bold">12-May-2024 10:30 AM</span>
+            {/* Interval badge */}
+            <button className="bg-blue-600 hover:bg-blue-500 text-white text-[10px] font-bold px-3 py-1.5 rounded transition shadow-sm select-none uppercase tracking-wider">
+              15 Min Interval
+            </button>
+
+            {/* Sync */}
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] uppercase font-bold text-slate-500">Last Updated:</span>
+              <div className="bg-slate-950 px-3 py-1.5 border border-slate-850 text-slate-300 rounded font-semibold font-mono flex items-center gap-2">
+                <span>12-May-2024 10:30 AM</span>
+                <RefreshCw
+                  onClick={refresh}
+                  className="w-3.5 h-3.5 text-sky-400 hover:text-white cursor-pointer transition"
+                />
+              </div>
             </div>
           </div>
         </header>
