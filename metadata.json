@@ -1,0 +1,6 @@
+{
+  "name": "Transformer Lifecycle Management Dashboard",
+  "description": "An integrated machine learning driven asset lifecycle management and health monitoring dashboard for distribution transformers, connected to Supabase for real-time analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
